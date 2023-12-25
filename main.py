@@ -30,6 +30,7 @@ db = SQLAlchemy()
 # create the app
 app = Flask(__name__)
 # configure the SQLite database, relative to the app instance folder
+load_dotenv()
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv(
     "DB_URI", "sqlite:///movies-collection.db"
 )
