@@ -2,6 +2,7 @@ import os
 
 import psycopg2
 import requests
+from dotenv import load_dotenv
 from flask import Flask, redirect, render_template, request, url_for
 from flask_bootstrap import Bootstrap5
 from flask_ckeditor import CKEditor
@@ -29,10 +30,10 @@ db = SQLAlchemy()
 # create the app
 app = Flask(__name__)
 # configure the SQLite database, relative to the app instance folder
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get(
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv(
     "DB_URI", "sqlite:///movies-collection.db"
 )
-app.config["SECRET_KEY"] = os.environ.get("FLASK_KEY")
+app.config["SECRET_KEY"] = os.getenv("FLASK_KEY")
 Bootstrap5(app)
 # initialize the app with the extension
 db.init_app(app)
