@@ -31,7 +31,7 @@ db = SQLAlchemy()
 app = Flask(__name__)
 # configure the SQLite database, relative to the app instance folder
 load_dotenv()
-
+tmdb_api_key = os.getenv("TMDB_API_KEY")
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv(
     "DB_URI", "sqlite:///movies-collection.db"
 )
@@ -117,7 +117,7 @@ def add():
 
         headers = {
             "accept": "application/json",
-            "Authorization": f"Bearer {os.getenv('TMDB_API_KEY')}",
+            "Authorization": f"Bearer {tmdb_api_key}",
         }
         response = requests.get(url, headers=headers)
         titles = response.json()["results"]
@@ -135,7 +135,7 @@ def find_movie():
 
         headers = {
             "accept": "application/json",
-            "Authorization": f"Bearer {os.getenv('TMDB_API_KEY')}",
+            "Authorization": f"Bearer {tmdb_api_key}",
         }
 
         response = requests.get(url, headers=headers)
