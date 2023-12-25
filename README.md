@@ -1,10 +1,10 @@
 # Flask Movies Collection
 
-## Overview
+## 🎬 Overview
 
 This Flask web application allows users to manage a collection of movies. Users can add, edit, rate, and delete movies within their collection.
 
-## Prerequisites
+## 🚀 Prerequisites
 
 1. Python 3.x
 2. Install required Python packages using:
@@ -15,7 +15,7 @@ This Flask web application allows users to manage a collection of movies. Users 
 
     On MacOS, use `pip3` instead of `pip`.
 
-## Getting Started
+## 🛠️ Getting Started
 
 1. Clone the repository:
 
@@ -43,18 +43,18 @@ This Flask web application allows users to manage a collection of movies. Users 
 
     The application will start, and you can access it at [http://localhost:5000](http://localhost:5000).
 
-## Live Deployment
+## 🌐 Live Deployment
 
 The live version of this application is accessible at [https://my-movies-website.onrender.com/](https://my-movies-website.onrender.com/).
 
-## Features
+## 🎥 Features
 
 - View a list of movies with ratings and reviews.
 - Edit the rating and review of each movie.
 - Delete movies from the collection.
 - Add new movies by searching The Movie Database (TMDb) API.
 
-## Project Structure
+## 📂 Project Structure
 
 1. `main.py`: The main application file.
 2. `templates/`: HTML templates for rendering pages.
@@ -62,12 +62,15 @@ The live version of this application is accessible at [https://my-movies-website
 4. `requirements.txt`: List of Python packages required for the project.
 5. `.env`: Environment variables configuration file (create this file).
 
-## Contributing
+## 🤝 Contributing
 
 Feel free to contribute to the project by opening issues or submitting pull requests. Follow the [GitHub flow](https://guides.github.com/introduction/flow/) when contributing.
 
+## 📄 License
 
-## Acknowledgments
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙌 Acknowledgments
 
 - [Flask](https://flask.palletsprojects.com/)
 - [The Movie Database (TMDb) API](https://www.themoviedb.org/documentation/api)
