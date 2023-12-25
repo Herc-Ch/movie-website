@@ -32,13 +32,13 @@ Ensure compliance with [The Movie Database (TMDb) API terms of service](https://
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/flask-movies-collection.git
+    git clone https://github.com/Herc-Ch/movie-website.git
     ```
 
 2. Navigate to the project folder:
 
     ```bash
-    cd flask-movies-collection
+    cd movie-website
     ```
 
 3. Install dependencies:
