@@ -14,6 +14,18 @@ This Flask web application allows users to manage a collection of movies. Users 
     ```
 
     On MacOS, use `pip3` instead of `pip`.
+   
+## 🌐 Data Scraping via APIs
+
+Flask Movies Collection utilizes data scraping through The Movie Database (TMDb) API to provide detailed information about movies. This integration allows users to seamlessly add new movies to their collection by searching and fetching data from TMDb.
+
+### 🔑 Key Points:
+
+- **The Movie Database (TMDb):** The project leverages the TMDb API to retrieve information such as movie titles, release years, descriptions, and poster images.
+
+### 🚨 Important Note:
+
+Ensure compliance with [The Movie Database (TMDb) API terms of service](https://www.themoviedb.org/documentation/api/terms-of-use) while using this feature.
 
 ## 🛠️ Getting Started
 
