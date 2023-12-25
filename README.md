@@ -26,6 +26,22 @@ Flask Movies Collection utilizes data scraping through The Movie Database (TMDb)
 ### 🚨 Important Note:
 
 Ensure compliance with [The Movie Database (TMDb) API terms of service](https://www.themoviedb.org/documentation/api/terms-of-use) while using this feature.
+### Movie Database API Key
+
+This project uses The Movie Database (TMDb) API to fetch movie information. To run the application, you'll need to obtain your own API key from [TMDb](https://developer.themoviedb.org/docs) by following these steps:
+
+1. Visit [TMDb Developer](https://developer.themoviedb.org/docs) and sign up for a developer account.
+2. Once logged in, navigate to your account settings to generate an API key.
+3. Copy the generated API key.
+4. Create a file named `.env` in the project root and add the following line: TMDB_API_KEY=your_generated_api_key
+   
+Make sure to replace `your_generated_api_key` with the actual API key you obtained from TMDb.
+
+5. Save the `.env` file. This file is listed in the project's `.gitignore` to ensure it's not included in the repository.
+
+Now you're ready to run the application with your own TMDb API key.
+
+
 
 ## 🛠️ Getting Started
 
