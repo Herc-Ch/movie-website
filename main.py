@@ -31,6 +31,7 @@ db = SQLAlchemy()
 app = Flask(__name__)
 # configure the SQLite database, relative to the app instance folder
 load_dotenv()
+
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv(
     "DB_URI", "sqlite:///movies-collection.db"
 )
@@ -116,7 +117,7 @@ def add():
 
         headers = {
             "accept": "application/json",
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NTQ2MDBjZTI1MzEwNGJlMzYzOWZhZTg0OGE5NzMyOCIsInN1YiI6IjY1Nzc0NDU4NTY0ZWM3MDExYjIwMjJkZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.zrqz9yDrIXqORNoUjdDc48GMq7z34bUsY6FQJz39c4g",
+            "Authorization": f"Bearer {os.getenv('TMDB_API_KEY')}",
         }
         response = requests.get(url, headers=headers)
         titles = response.json()["results"]
@@ -134,7 +135,7 @@ def find_movie():
 
         headers = {
             "accept": "application/json",
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NTQ2MDBjZTI1MzEwNGJlMzYzOWZhZTg0OGE5NzMyOCIsInN1YiI6IjY1Nzc0NDU4NTY0ZWM3MDExYjIwMjJkZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.zrqz9yDrIXqORNoUjdDc48GMq7z34bUsY6FQJz39c4g",
+            "Authorization": f"Bearer {os.getenv('TMDB_API_KEY')}",
         }
 
         response = requests.get(url, headers=headers)
